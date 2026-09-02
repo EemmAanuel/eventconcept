@@ -93,3 +93,43 @@ footer{background:#171513;color:#f1eee7;padding:55px 7vw 25px}.footer-top{displa
     color: #ffffff;
   }
 }
+/* Keep navigation above the hero image */
+.nav {
+  position: relative;
+  z-index: 2000;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    z-index: 2000;
+  }
+
+  .menu-btn {
+    display: flex;
+    position: relative;
+    z-index: 2001;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .menu-btn i {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+  }
+
+  .nav .main-nav {
+    z-index: 2000;
+  }
+}
