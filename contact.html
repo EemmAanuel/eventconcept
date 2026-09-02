@@ -15,15 +15,30 @@
 
   <header class="nav">
     <a class="logo" href="index.html">THE<span>.</span>EXPERIENCE</a>
-    <nav>
+
+    <nav class="main-nav" id="site-menu" aria-label="Main navigation">
       <a href="work.html">Work</a>
       <a href="services.html">Services</a>
       <a href="process.html">Process</a>
+      <a class="mobile-cta" href="contact.html">Plan an event <span>↗</span></a>
     </nav>
-    <a class="nav-cta" href="contact.html">Plan an event <span>↗</span></a>
-    <button class="menu-btn" aria-label="Open menu"><i></i><i></i></button>
-  </header>
 
+    <a class="nav-cta" href="contact.html">
+      Plan an event <span>↗</span>
+    </a>
+
+    <button
+      class="menu-btn"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="site-menu"
+      aria-expanded="false"
+    >
+      <i></i>
+      <i></i>
+    </button>
+  </header>
+  
   <main>
     <section class="cta" id="contact">
       <div class="cta-bg"></div>
