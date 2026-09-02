@@ -27,8 +27,6 @@ footer{background:#171513;color:#f1eee7;padding:55px 7vw 25px}.footer-top{displa
 @media (max-width: 768px) {
   .nav {
     position: relative;
-    z-index: 3000;
-    background: #f6f3ed;
   }
 
   .nav .nav-cta {
@@ -37,36 +35,33 @@ footer{background:#171513;color:#f1eee7;padding:55px 7vw 25px}.footer-top{displa
 
   .menu-btn {
     display: flex;
-    position: relative;
-    z-index: 3002;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 6px;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     padding: 0;
-    color: #151515;
     background: transparent;
-    border: 1px solid #151515;
-    border-radius: 50%;
+    border: 0;
     cursor: pointer;
+    z-index: 1001;
   }
 
   .menu-btn i {
     display: block;
-    width: 22px;
-    height: 2px;
-    background: #151515;
+    width: 25px;
+    height: 1px;
+    background: currentColor;
     transition: transform 0.25s ease;
   }
 
   .menu-btn.is-open i:first-child {
-    transform: translateY(4px) rotate(45deg);
+    transform: translateY(3.5px) rotate(45deg);
   }
 
   .menu-btn.is-open i:last-child {
-    transform: translateY(-4px) rotate(-45deg);
+    transform: translateY(-3.5px) rotate(-45deg);
   }
 
   .nav .main-nav {
@@ -75,13 +70,12 @@ footer{background:#171513;color:#f1eee7;padding:55px 7vw 25px}.footer-top{displa
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 3001;
+    z-index: 1000;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 0 7% 2rem;
-    background: #f6f3ed !important;
-    opacity: 1 !important;
+    padding: 1.5rem 6%;
+    background: #111111;
   }
 
   .nav .main-nav.is-open {
@@ -89,14 +83,53 @@ footer{background:#171513;color:#f1eee7;padding:55px 7vw 25px}.footer-top{displa
   }
 
   .nav .main-nav a {
-    color: #151515 !important;
-    padding: 1.2rem 0;
-    border-bottom: 1px solid #cfc9c2;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   }
 
   .nav .main-nav .mobile-cta {
     display: block;
     margin-top: 1rem;
-    font-weight: 600;
+    color: #ffffff;
+  }
+}
+/* Keep navigation above the hero image */
+.nav {
+  position: relative;
+  z-index: 2000;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    z-index: 2000;
+  }
+
+  .menu-btn {
+    display: flex;
+    position: relative;
+    z-index: 2001;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .menu-btn i {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+  }
+
+  .nav .main-nav {
+    z-index: 2000;
   }
 }
